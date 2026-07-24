@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>レンタル彼氏</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFEAF2;
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+    color:#444;
+}
+
+.container{
+    width:92%;
+    max-width:500px;
+    margin:40px auto;
+}
+
+/* タイトル */
+h1{
+    text-align:center;
+    font-size:32px;
+    color:#d85d8d;
+    margin-bottom:15px;
+}
+
+/* 説明 */
+.description{
+    text-align:center;
+    font-size:15px;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+/* 画像一覧 */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+/* 写真 */
+.gallery a{
+    display:block;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.gallery img:active{
+    transform:scale(.96);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>レンタル彼氏</h1>
+
+<p class="description">
+説明
+</p>
+
+<div class="gallery">
+
+<!-- 1枚目 -->
+<a href="boy1.html">
+<img src="images/boy1.jpg" alt="">
+</a>
+
+<!-- 2枚目 -->
+<a href="boy2.html">
+<img src="images/boy2.jpg" alt="">
+</a>
+
+<!-- 3枚目 -->
+<a href="boy3.html">
+<img src="images/boy3.jpg" alt="">
+</a>
+
+<!-- 4枚目 -->
+<a href="boy4.html">
+<img src="images/boy4.jpg" alt="">
+</a>
+
+<!-- 5枚目 -->
+<a href="boy5.html">
+<img src="images/boy5.jpg" alt="">
+</a>
+
+<!-- 6枚目 -->
+<a href="boy6.html">
+<img src="images/boy6.jpg" alt="">
+</a>
+
+<!-- 7枚目 -->
+<a href="boy7.html">
+<img src="images/boy7.jpg" alt="">
+</a>
+
+<!-- 8枚目 -->
+<a href="boy8.html">
+<img src="images/boy8.jpg" alt="">
+</a>
+
+<!-- 9枚目 -->
+<a href="boy9.html">
+<img src="images/boy9.jpg" alt="">
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
