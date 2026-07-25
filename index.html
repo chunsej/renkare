@@ -1,240 +1,898 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GLAMOUR MEMBERS</title>
+
+<title>PREMIUM CAST</title>
+
+
 
 <style>
 
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
+
+
 
 body{
 
-    font-family:"Yu Gothic","Hiragino Sans",sans-serif;
+font-family:
+"Yu Gothic",
+sans-serif;
 
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.80)),
-    url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80");
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+background:
 
-    color:white;
+linear-gradient(
+180deg,
+#050505,
+#1a0008
+);
+
+
+color:white;
+
 
 }
+
+
+
+/* ヘッダー */
 
 header{
 
-    text-align:center;
-    padding:40px 20px 30px;
+
+text-align:center;
+
+
+padding:50px 20px 30px;
+
 
 }
 
-header h1{
 
-    font-size:36px;
-    color:#FFD700;
-    letter-spacing:4px;
-    text-shadow:0 0 15px gold;
 
-}
+.logo{
 
-header p{
 
-    margin-top:12px;
-    color:#dddddd;
-    font-size:15px;
-    line-height:1.8;
+font-size:38px;
 
-}
 
-.member-list{
+letter-spacing:6px;
 
-    width:100%;
-    max-width:420px;
 
-    margin:0 auto;
+color:#ffd700;
 
-    padding:20px;
 
-    display:grid;
+text-shadow:
 
-    grid-template-columns:repeat(3,1fr);
+0 0 10px gold,
+0 0 30px #ff9900;
 
-    gap:12px;
 
 }
 
-.member{
 
-    background:rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,215,0,.3);
+.subtitle{
 
-    border-radius:15px;
 
-    overflow:hidden;
+margin-top:15px;
 
-    backdrop-filter:blur(8px);
 
-    transition:.3s;
+color:#ddd;
 
-    box-shadow:0 0 12px rgba(255,215,0,.2);
+
+font-size:14px;
+
 
 }
 
-.member:hover{
 
-    transform:translateY(-5px);
 
-    box-shadow:0 0 20px gold;
 
-}
 
-.member a{
+/* キャスト一覧 */
 
-    text-decoration:none;
-    color:white;
+.cast-list{
 
-}
 
-.member img{
+display:grid;
 
-    width:100%;
 
-    aspect-ratio:3/4;
+grid-template-columns:
+repeat(3,1fr);
 
-    object-fit:cover;
 
-    display:block;
+gap:12px;
+
+
+padding:15px;
+
 
 }
 
-.member-name{
 
-    padding:10px 5px;
 
-    text-align:center;
 
-    font-size:15px;
 
-    font-weight:bold;
+/* カード */
 
-    letter-spacing:1px;
+
+.cast-card{
+
+
+text-decoration:none;
+
+
+color:white;
+
+
+opacity:0;
+
+
+transform:translateY(40px);
+
+
+transition:
+
+0.8s;
+
 
 }
+
+
+
+.cast-card.show{
+
+
+opacity:1;
+
+
+transform:translateY(0);
+
+
+}
+
+
+
+
+.photo-box{
+
+
+position:relative;
+
+
+border-radius:15px;
+
+
+overflow:hidden;
+
+
+background:#222;
+
+
+}
+
+
+
+
+
+.photo-box img{
+
+
+width:100%;
+
+
+aspect-ratio:3/4;
+
+
+object-fit:cover;
+
+
+display:block;
+
+
+}
+
+
+
+
+
+/* 名前 */
+
+.name{
+
+
+text-align:center;
+
+
+margin-top:8px;
+
+
+font-size:17px;
+
+
+font-weight:bold;
+
+
+}
+
+
+
+
+
+.catch{
+
+
+text-align:center;
+
+
+font-size:10px;
+
+
+color:#ddd;
+
+
+margin-top:5px;
+
+
+}
+
+
+
+
+
+/* バッジ */
+
+
+.badge{
+
+
+position:absolute;
+
+
+top:8px;
+
+
+left:8px;
+
+
+padding:5px 8px;
+
+
+border-radius:20px;
+
+
+font-size:10px;
+
+
+font-weight:bold;
+
+
+background:
+
+linear-gradient(
+45deg,
+gold,
+white
+);
+
+
+color:#7a4500;
+
+
+}
+
+
+
+
+
+/* 色枠 */
+
+
+.green .photo-box{
+
+border:3px solid #7dff8a;
+
+box-shadow:
+0 0 15px #00ff66;
+
+}
+
+
+
+.blue .photo-box{
+
+border:3px solid #70d7ff;
+
+box-shadow:
+0 0 15px #0099ff;
+
+}
+
+
+
+.white .photo-box{
+
+border:3px solid white;
+
+box-shadow:
+0 0 15px gold;
+
+}
+
+
+
+.sky .photo-box{
+
+border:3px solid #8eeaff;
+
+box-shadow:
+0 0 15px #00ccff;
+
+}
+
+
+
+.camel .photo-box{
+
+border:3px solid #d9ae75;
+
+box-shadow:
+0 0 15px #b57a35;
+
+}
+
+
+
+.pink .photo-box{
+
+border:3px solid #ff9fc8;
+
+box-shadow:
+0 0 15px #ff69b4;
+
+}
+
+
+
+.purple .photo-box{
+
+border:3px solid #d5a6ff;
+
+box-shadow:
+0 0 15px #a855f7;
+
+}
+
+
+
+.black .photo-box{
+
+border:3px solid #888;
+
+box-shadow:
+0 0 20px black;
+
+}
+
+
+
+.red .photo-box{
+
+border:3px solid #ff5555;
+
+box-shadow:
+0 0 15px red;
+
+}
+
+
+
+
+
+/* footer */
+
 
 footer{
 
-    text-align:center;
 
-    padding:30px;
+text-align:center;
 
-    color:#bbbbbb;
 
-    font-size:12px;
+padding:40px;
+
+
+color:#aaa;
+
+
+font-size:12px;
+
 
 }
 
+
+
 </style>
+
 
 </head>
 
+
+
+
 <body>
+
+
+
+
 
 <header>
 
-<h1>GLAMOUR MEMBERS</h1>
 
-<p>
+<div class="logo">
 
-あなたの理想がきっと見つかる。<br>
-個性豊かなメンバーをご紹介します。
+PREMIUM CAST
 
-</p>
+</div>
+
+
+<div class="subtitle">
+
+あなたの特別な時間を彩る9人
+
+</div>
+
 
 </header>
 
-<section class="member-list">
 
-<div class="member">
-<a href="SHO.html">
-<img src="SHO.jpg" alt="奨">
-<div class="member-name">奨</div>
-</a>
+
+
+
+
+
+<div class="cast-list">
+
+
+
+
+
+<!-- 奨 -->
+
+<a href="boy1.html" class="cast-card green">
+
+
+<div class="photo-box">
+
+<img src="images/boy1.jpg">
+
+
 </div>
 
-<div class="member">
-<a href="REN.html">
-<img src="REN.jpg" alt="蓮">
-<div class="member-name">蓮</div>
-</a>
+
+<div class="name">
+
+奨
+
 </div>
 
-<div class="member">
-<a href="RUKI.html">
-<img src="RUKI.jpg" alt="瑠姫">
-<div class="member-name">瑠姫</div>
-</a>
+
+<div class="catch">
+
+癒し系爽やか王子
+
 </div>
 
-<div class="member">
-<a href="JUNKI.html">
-<img src="JUNKI.jpg" alt="純喜">
-<div class="member-name">純喜</div>
+
 </a>
+
+
+
+
+
+
+<!-- 蓮 -->
+
+
+<a href="boy2.html" class="cast-card blue">
+
+
+<div class="photo-box">
+
+<img src="images/boy2.jpg">
+
+
 </div>
 
-<div class="member">
-<a href="KEIGO.html">
-<img src="KEIGO.jpg" alt="景瑚">
-<div class="member-name">景瑚</div>
-</a>
+
+<div class="name">
+
+蓮
+
 </div>
 
-<div class="member">
-<a href="TAKUMI.html">
-<img src="TAKUMI.jpg" alt="一拓実">
-<div class="member-name">拓実</div>
-</a>
+
+<div class="catch">
+
+クールな紳士
+
 </div>
 
-<div class="member">
-<a href="SYOYA.html">
-<img src="SYOYA.jpg" alt="翔也">
-<div class="member-name">翔也</div>
+
 </a>
+
+
+
+
+
+
+
+<!-- 瑠姫 -->
+
+
+<a href="boy3.html" class="cast-card white">
+
+
+<div class="photo-box">
+
+
+<span class="badge">
+
+人気No.1
+
+</span>
+
+
+<img src="images/boy3.jpg">
+
+
 </div>
 
-<div class="member">
-<a href="SKY.html">
-<img src="SKY.jpg" alt="碧海">
-<div class="member-name">碧海</div>
-</a>
+
+<div class="name">
+
+瑠姫
+
 </div>
 
-<div class="member">
-<a href="MAME.html">
-<img src="MAME.jpg" alt="一成">
-<div class="member-name">一成</div>
-</a>
+
+<div class="catch">
+
+憧れの王子様
+
 </div>
 
-</section>
+
+</a>
+
+
+
+
+
+
+
+<!-- 純喜 -->
+
+
+<a href="boy4.html" class="cast-card sky">
+
+
+<div class="photo-box">
+
+
+<img src="images/boy4.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+純喜
+
+</div>
+
+
+<div class="catch">
+
+全力熱血キャスト
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- 景瑚 -->
+
+
+<a href="boy5.html" class="cast-card camel">
+
+
+<div class="photo-box">
+
+
+<img src="images/boy5.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+景瑚
+
+</div>
+
+
+<div class="catch">
+
+おしゃれ番長
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- 拓実 -->
+
+
+<a href="boy6.html" class="cast-card pink">
+
+
+<div class="photo-box">
+
+
+<span class="badge">
+
+人気No.1
+
+</span>
+
+
+<img src="images/boy6.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+拓実
+
+</div>
+
+
+<div class="catch">
+
+ギャップ最強王子
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- 翔也 -->
+
+
+<a href="boy7.html" class="cast-card purple">
+
+
+<div class="photo-box">
+
+
+<span class="badge">
+
+新人
+
+</span>
+
+
+<img src="images/boy7.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+翔也
+
+</div>
+
+
+<div class="catch">
+
+不思議系エンタメ男子
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- 碧海 -->
+
+
+<a href="boy8.html" class="cast-card black">
+
+
+<div class="photo-box">
+
+
+<img src="images/boy8.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+碧海
+
+</div>
+
+
+<div class="catch">
+
+ワイルドな沼系男子
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- 一成 -->
+
+
+<a href="boy9.html" class="cast-card red">
+
+
+<div class="photo-box">
+
+
+<span class="badge">
+
+新人
+
+</span>
+
+
+<img src="images/boy9.jpg">
+
+
+</div>
+
+
+<div class="name">
+
+一成
+
+</div>
+
+
+<div class="catch">
+
+最年少ヒーロー
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
 
 <footer>
 
-© 2026 GLAMOUR MEMBERS
+© PREMIUM CAST
 
 </footer>
 
+
+
+
+
+<script>
+
+
+const cards =
+document.querySelectorAll(".cast-card");
+
+
+
+const observer =
+new IntersectionObserver(entries=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.classList.add("show");
+
+
+}
+
+
+});
+
+
+});
+
+
+
+cards.forEach(card=>{
+
+observer.observe(card);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
 </body>
+
+
 </html>
