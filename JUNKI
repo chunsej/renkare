@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>純喜 - Profile</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:"Yu Gothic",sans-serif;
+
+background:
+
+linear-gradient(
+rgba(0,80,150,.55),
+rgba(0,0,0,.9)
+),
+
+url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80");
+
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+}
+
+
+/* header */
+
+header{
+
+text-align:center;
+
+padding:40px 20px;
+
+}
+
+
+header h1{
+
+font-size:38px;
+
+color:#b9ecff;
+
+letter-spacing:5px;
+
+text-shadow:
+
+0 0 10px #00ccff,
+0 0 25px white;
+
+}
+
+
+header p{
+
+margin-top:10px;
+
+color:#eee;
+
+}
+
+
+/* photo */
+
+.profile-img{
+
+width:250px;
+
+height:330px;
+
+object-fit:cover;
+
+display:block;
+
+margin:20px auto;
+
+
+border-radius:20px;
+
+
+border:3px solid #b9ecff;
+
+
+box-shadow:
+
+0 0 20px #00ccff,
+0 0 35px white;
+
+}
+
+
+
+/* card */
+
+.card{
+
+width:90%;
+
+max-width:420px;
+
+margin:20px auto;
+
+padding:25px;
+
+
+background:
+
+rgba(255,255,255,.12);
+
+
+border:
+
+1px solid rgba(185,236,255,.7);
+
+
+border-radius:20px;
+
+
+backdrop-filter:blur(10px);
+
+
+}
+
+
+
+/* name */
+
+.name{
+
+text-align:center;
+
+font-size:36px;
+
+font-weight:bold;
+
+
+color:#b9ecff;
+
+
+text-shadow:
+
+0 0 15px #00ccff;
+
+
+}
+
+
+.catch{
+
+text-align:center;
+
+margin-top:12px;
+
+font-size:16px;
+
+}
+
+
+/* profile */
+
+.profile{
+
+line-height:2;
+
+font-size:15px;
+
+}
+
+
+
+/* message */
+
+.message{
+
+line-height:1.9;
+
+}
+
+
+
+/* review */
+
+.review-title{
+
+font-size:22px;
+
+color:#b9ecff;
+
+margin-bottom:15px;
+
+}
+
+
+
+.stars{
+
+font-size:25px;
+
+color:#ffd700;
+
+}
+
+
+
+.comment{
+
+margin-top:15px;
+
+line-height:1.8;
+
+}
+
+
+
+/* back */
+
+.back{
+
+display:block;
+
+width:220px;
+
+margin:40px auto;
+
+padding:15px;
+
+
+text-align:center;
+
+
+border-radius:30px;
+
+
+background:#b9ecff;
+
+
+color:#00334d;
+
+
+text-decoration:none;
+
+
+font-weight:bold;
+
+
+box-shadow:
+
+0 0 20px #00ccff;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+
+PREMIUM CAST
+
+</h1>
+
+<p>
+
+Special Profile
+
+</p>
+
+</header>
+
+
+
+
+<img
+
+class="profile-img"
+
+src="JUNKI.jpg"
+
+alt="純喜"
+
+>
+
+
+
+
+<div class="card">
+
+
+<div class="name">
+
+純喜
+
+</div>
+
+
+<div class="catch">
+
+🩵 全力で笑って、全力で向き合う熱血キャスト 🩵
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+PROFILE
+
+</h2>
+
+
+<div class="profile">
+
+
+年齢：25歳<br>
+
+身長：177cm<br>
+
+血液型：A型<br>
+
+誕生日：11月19日<br>
+
+趣味：スポーツ・旅行<br>
+
+好きなタイプ：一緒に楽しめる人
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+MESSAGE
+
+</h2>
+
+
+<p class="message">
+
+
+初めまして、純喜です！<br><br>
+
+
+せっかく一緒に過ごす時間だから、
+思いっきり笑って、
+最高の思い出にしたいと思っています。<br><br>
+
+
+楽しいことには全力！
+感動することには全力で向き合います。<br><br>
+
+
+あなたが笑顔になれる時間を
+一緒に作れたら嬉しいです。
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2 class="review-title">
+
+CUSTOMER VOICE
+
+</h2>
+
+
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+
+<p class="comment">
+
+
+「とにかく明るくて元気をもらえました！
+一緒に笑った時間が最高でした。」
+
+
+</p>
+
+
+
+<hr><br>
+
+
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+
+<p class="comment">
+
+
+「まっすぐ向き合ってくれる姿勢が
+すごく嬉しかったです。
+また会いたいと思える方でした。」
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+<a href="index.html" class="back">
+
+メンバー一覧へ戻る
+
+</a>
+
+
+
+
+</body>
+
+</html>
