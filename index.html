@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>レンタル彼氏</title>
+<title>GLAMOUR MEMBERS</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,122 +16,225 @@
 }
 
 body{
-    background:#FFEAF2;
-    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-    color:#444;
+
+    font-family:"Yu Gothic","Hiragino Sans",sans-serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.80)),
+    url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+
 }
 
-.container{
-    width:92%;
-    max-width:500px;
-    margin:40px auto;
-}
+header{
 
-/* タイトル */
-h1{
     text-align:center;
-    font-size:32px;
-    color:#d85d8d;
-    margin-bottom:15px;
+    padding:40px 20px 30px;
+
 }
 
-/* 説明 */
-.description{
-    text-align:center;
+header h1{
+
+    font-size:36px;
+    color:#FFD700;
+    letter-spacing:4px;
+    text-shadow:0 0 15px gold;
+
+}
+
+header p{
+
+    margin-top:12px;
+    color:#dddddd;
     font-size:15px;
-    margin-bottom:35px;
     line-height:1.8;
+
 }
 
-/* 画像一覧 */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
+.member-list{
 
-/* 写真 */
-.gallery a{
-    display:block;
-}
-
-.gallery img{
     width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    border-radius:12px;
-    background:#fff;
-    box-shadow:0 3px 8px rgba(0,0,0,.08);
-    transition:.2s;
+    max-width:420px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
 }
 
-.gallery img:active{
-    transform:scale(.96);
+.member{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,215,0,.3);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(8px);
+
+    transition:.3s;
+
+    box-shadow:0 0 12px rgba(255,215,0,.2);
+
 }
+
+.member:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px gold;
+
+}
+
+.member a{
+
+    text-decoration:none;
+    color:white;
+
+}
+
+.member img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.member-name{
+
+    padding:10px 5px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#bbbbbb;
+
+    font-size:12px;
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>レンタル彼氏</h1>
+<h1>GLAMOUR MEMBERS</h1>
 
-<p class="description">
-説明
+<p>
+
+あなたの理想がきっと見つかる。<br>
+個性豊かなメンバーをご紹介します。
+
 </p>
 
-<div class="gallery">
+</header>
 
-<!-- 1枚目 -->
+<section class="member-list">
+
+<div class="member">
 <a href="boy1.html">
-<img src="images/boy1.jpg" alt="">
+<img src="images/boy1.jpg" alt="奨">
+<div class="member-name">奨</div>
 </a>
+</div>
 
-<!-- 2枚目 -->
+<div class="member">
 <a href="boy2.html">
-<img src="images/boy2.jpg" alt="">
+<img src="images/boy2.jpg" alt="蓮">
+<div class="member-name">蓮</div>
 </a>
+</div>
 
-<!-- 3枚目 -->
+<div class="member">
 <a href="boy3.html">
-<img src="images/boy3.jpg" alt="">
+<img src="images/boy3.jpg" alt="瑠姫">
+<div class="member-name">瑠姫</div>
 </a>
+</div>
 
-<!-- 4枚目 -->
+<div class="member">
 <a href="boy4.html">
-<img src="images/boy4.jpg" alt="">
+<img src="images/boy4.jpg" alt="純喜">
+<div class="member-name">純喜</div>
 </a>
+</div>
 
-<!-- 5枚目 -->
+<div class="member">
 <a href="boy5.html">
-<img src="images/boy5.jpg" alt="">
+<img src="images/boy5.jpg" alt="景瑚">
+<div class="member-name">景瑚</div>
 </a>
+</div>
 
-<!-- 6枚目 -->
+<div class="member">
 <a href="boy6.html">
-<img src="images/boy6.jpg" alt="">
+<img src="images/boy6.jpg" alt="一拓実">
+<div class="member-name">一拓実</div>
 </a>
+</div>
 
-<!-- 7枚目 -->
+<div class="member">
 <a href="boy7.html">
-<img src="images/boy7.jpg" alt="">
+<img src="images/boy7.jpg" alt="一成也">
+<div class="member-name">一成也</div>
 </a>
+</div>
 
-<!-- 8枚目 -->
+<div class="member">
 <a href="boy8.html">
-<img src="images/boy8.jpg" alt="">
+<img src="images/boy8.jpg" alt="碧海">
+<div class="member-name">碧海</div>
 </a>
+</div>
 
-<!-- 9枚目 -->
+<div class="member">
 <a href="boy9.html">
-<img src="images/boy9.jpg" alt="">
+<img src="images/boy9.jpg" alt="一成">
+<div class="member-name">一成</div>
 </a>
-
 </div>
 
-</div>
+</section>
+
+<footer>
+
+© 2026 GLAMOUR MEMBERS
+
+</footer>
 
 </body>
 </html>
