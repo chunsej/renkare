@@ -22,29 +22,64 @@ body{
 
 font-family:"Yu Gothic",sans-serif;
 
+
 background:
 
 linear-gradient(
-rgba(0,10,35,.88),
-rgba(0,0,0,.96)
+rgba(0,5,25,.9),
+rgba(0,0,0,.98)
 ),
 
 radial-gradient(
-circle,
-#102a55,
-#000
+circle at top,
+#19345c,
+#000 70%
 );
+
 
 
 color:white;
 
 min-height:100vh;
 
+
 }
 
 
 
-/* 上部 */
+/* 青い月光 */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+
+background:
+
+radial-gradient(
+circle,
+rgba(80,180,255,.15),
+transparent 45%
+);
+
+
+pointer-events:none;
+
+}
+
+
+
+/* header */
 
 header{
 
@@ -58,16 +93,22 @@ padding:45px 20px 30px;
 
 .logo{
 
+
 font-size:32px;
 
-letter-spacing:5px;
 
-color:#b9eaff;
+letter-spacing:6px;
+
+
+color:#d8f3ff;
+
 
 text-shadow:
 
-0 0 10px #0099ff,
-0 0 25px white;
+
+0 0 10px #00aaff,
+0 0 30px white;
+
 
 }
 
@@ -75,11 +116,15 @@ text-shadow:
 
 .sub{
 
+
 margin-top:15px;
+
 
 font-size:13px;
 
+
 color:#aaa;
+
 
 }
 
@@ -87,7 +132,8 @@ color:#aaa;
 
 
 
-/* 口コミカード */
+
+/* review */
 
 .review-box{
 
@@ -96,21 +142,27 @@ width:90%;
 
 max-width:500px;
 
+
 margin:20px auto 40px;
 
 
 padding:30px 25px;
 
 
+
 background:
 
-rgba(0,20,60,.75);
+linear-gradient(
+145deg,
+rgba(0,60,120,.25),
+rgba(0,0,0,.85)
+);
 
 
 
 border:
 
-1px solid #70d7ff;
+1px solid rgba(120,210,255,.8);
 
 
 
@@ -120,7 +172,9 @@ border-radius:20px;
 
 box-shadow:
 
-0 0 20px rgba(0,150,255,.35);
+
+0 0 25px rgba(0,150,255,.3),
+inset 0 0 30px rgba(0,150,255,.08);
 
 
 
@@ -130,34 +184,47 @@ box-shadow:
 
 
 
-/* タイトル */
-
+/* title */
 
 .review-title{
 
+
 font-size:18px;
 
-color:#b9eaff;
+
+color:#d8f3ff;
+
 
 line-height:1.8;
+
 
 margin-bottom:30px;
 
 
+
 border-bottom:
 
-1px solid rgba(185,234,255,.5);
+
+1px solid rgba(120,210,255,.4);
+
 
 
 padding-bottom:15px;
 
 
+
+text-shadow:
+
+
+0 0 10px #00aaff;
+
+
 }
 
 
 
-/* 本文入力部分 */
 
+/* 本文 */
 
 .review-text{
 
@@ -171,7 +238,6 @@ line-height:2;
 color:#eee;
 
 
-
 min-height:350px;
 
 
@@ -181,20 +247,7 @@ min-height:350px;
 
 
 
-
-.review-text span{
-
-
-color:#777;
-
-
-}
-
-
-
-
-
-/* キャスト情報 */
+/* cast */
 
 .cast-info{
 
@@ -205,26 +258,31 @@ text-align:center;
 margin-top:30px;
 
 
+
 }
+
 
 
 
 .cast-name{
 
 
-font-size:28px;
+font-size:32px;
 
 
-color:#b9eaff;
+color:#d8f3ff;
+
 
 
 text-shadow:
 
-0 0 10px #0099ff;
+
+0 0 15px #00aaff,
+0 0 30px #0066ff;
+
 
 
 }
-
 
 
 
@@ -234,7 +292,11 @@ text-shadow:
 
 font-size:13px;
 
+
 color:#aaa;
+
+
+letter-spacing:3px;
 
 
 }
@@ -243,8 +305,7 @@ color:#aaa;
 
 
 
-/* 戻るボタン */
-
+/* back */
 
 .back{
 
@@ -258,10 +319,13 @@ width:260px;
 margin:40px auto 50px;
 
 
+
 padding:16px;
 
 
+
 text-align:center;
+
 
 
 border-radius:30px;
@@ -269,6 +333,7 @@ border-radius:30px;
 
 
 background:
+
 
 linear-gradient(
 90deg,
@@ -278,7 +343,8 @@ white
 
 
 
-color:#002040;
+color:#001b33;
+
 
 
 font-weight:bold;
@@ -290,11 +356,11 @@ text-decoration:none;
 
 box-shadow:
 
-0 0 20px #0099ff;
+
+0 0 25px #00aaff;
 
 
 }
-
 
 
 
@@ -308,6 +374,7 @@ box-shadow:
 
 
 
+
 <header>
 
 
@@ -316,6 +383,7 @@ box-shadow:
 CUSTOMER VOICE
 
 </div>
+
 
 
 <div class="sub">
@@ -330,6 +398,9 @@ CUSTOMER VOICE
 
 
 
+
+
+
 <div class="review-box">
 
 
@@ -337,12 +408,16 @@ CUSTOMER VOICE
 <div class="review-title">
 
 
-★☆☆☆☆<br>
+★★★★★<br>
 
-大阪府・20代女性の口コミ
+
+東京都・20代女性の口コミ
+
 
 
 </div>
+
+
 
 
 
@@ -354,13 +429,18 @@ CUSTOMER VOICE
 
 例）<br>
 
-最初は少し緊張していましたが、
-落ち着いた雰囲気で優しく話しかけてくれて安心しました。<br><br>
 
-何気ない会話の中でも気遣いを感じられて、
-大人の余裕を感じる素敵な時間でした。<br><br>
+初めは少し緊張していましたが、
+落ち着いた雰囲気で優しく迎えてくれました。<br><br>
 
-また特別な日に会いたいと思える方です。
+
+会話のひとつひとつに気遣いがあり、
+自然と安心して過ごすことができました。<br><br>
+
+
+大人の余裕を感じる素敵な時間で、
+また特別な日に会いたいと思える方でした。
+
 
 
 
@@ -369,7 +449,9 @@ CUSTOMER VOICE
 
 
 
+
 <div class="cast-info">
+
 
 
 <div class="cast-name">
@@ -379,12 +461,13 @@ CUSTOMER VOICE
 </div>
 
 
-
 </div>
 
 
 
 </div>
+
+
 
 
 
@@ -396,6 +479,7 @@ CUSTOMER VOICE
 別のキャストを選ぶ
 
 </a>
+
 
 
 
