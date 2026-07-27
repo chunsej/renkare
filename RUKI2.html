@@ -22,21 +22,28 @@ body{
 
 font-family:"Yu Gothic",sans-serif;
 
+color:white;
+
+
 background:
 
-radial-gradient(circle at top,#fff8dc,#222);
+radial-gradient(circle at top,
+#fff3b0 0%,
+#3b2600 25%,
+#050505 70%);
 
-color:white;
+
+overflow-x:hidden;
 
 }
 
 
-
-/* 背景キラキラ */
+/* キラキラ背景 */
 
 body:before{
 
-content:"";
+content:"✨  ✦  ✧  ✨  ✦  ✧  ✨  ✦";
+
 
 position:fixed;
 
@@ -47,29 +54,45 @@ width:100%;
 height:100%;
 
 
-background-image:
+font-size:40px;
 
-radial-gradient(white 1px,transparent 1px);
+line-height:100px;
 
-background-size:35px 35px;
+letter-spacing:30px;
 
 
-opacity:.25;
+color:rgba(255,215,0,.35);
+
+
+animation: sparkle 8s infinite linear;
+
 
 pointer-events:none;
 
 }
 
 
+@keyframes sparkle{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-200px);
+}
+
+}
 
 
+
+/* header */
 
 header{
 
 text-align:center;
 
 padding:45px 20px;
-
 
 }
 
@@ -79,27 +102,38 @@ padding:45px 20px;
 
 display:inline-block;
 
-padding:8px 25px;
 
-border-radius:30px;
+padding:10px 35px;
+
+
+border-radius:40px;
 
 
 background:
 
 linear-gradient(
 90deg,
+#8b6500,
 #fff,
-#ffd700
+#ffd700,
+#fff,
+#8b6500
 );
 
 
-color:#8b6500;
+
+color:#5b3d00;
+
 
 font-weight:bold;
 
+
 box-shadow:
 
-0 0 20px gold;
+
+0 0 20px gold,
+0 0 40px white;
+
 
 }
 
@@ -108,22 +142,29 @@ box-shadow:
 
 header h1{
 
-margin-top:20px;
 
-font-size:42px;
-
-
-color:white;
+margin-top:25px;
 
 
-letter-spacing:6px;
+font-size:50px;
+
+
+letter-spacing:8px;
+
+
+color:#fff;
 
 
 text-shadow:
 
-0 0 10px gold,
-0 0 25px white,
-0 0 40px gold;
+
+0 0 5px white,
+
+0 0 15px gold,
+
+0 0 35px gold,
+
+0 0 60px #ffcc00;
 
 
 }
@@ -132,11 +173,18 @@ text-shadow:
 
 header p{
 
-margin-top:10px;
 
-color:#fff4c7;
+font-size:18px;
+
+
+color:#ffe9a6;
+
+
+letter-spacing:5px;
+
 
 }
+
 
 
 
@@ -145,9 +193,11 @@ color:#fff4c7;
 
 .profile-img{
 
-width:260px;
 
-height:350px;
+width:270px;
+
+
+height:360px;
 
 
 object-fit:cover;
@@ -155,23 +205,38 @@ object-fit:cover;
 
 display:block;
 
+
 margin:20px auto;
 
 
-border-radius:25px;
+border-radius:30px;
+
 
 
 border:
 
-4px solid gold;
+5px solid;
+
+
+border-image:
+
+linear-gradient(
+45deg,
+gold,
+white,
+gold
+)1;
+
 
 
 box-shadow:
 
 
 0 0 20px white,
-0 0 40px gold,
-0 0 70px #fff;
+
+0 0 50px gold,
+
+0 0 80px #ffcc00;
 
 
 
@@ -179,6 +244,7 @@ box-shadow:
 
 
 
+/* カード */
 
 
 .card{
@@ -192,19 +258,20 @@ max-width:430px;
 margin:25px auto;
 
 
-padding:28px;
+padding:30px;
 
 
 
 background:
 
+
 linear-gradient(
 
 135deg,
 
-rgba(255,255,255,.35),
+rgba(255,255,255,.25),
 
-rgba(255,215,0,.15)
+rgba(255,215,0,.18)
 
 );
 
@@ -212,7 +279,8 @@ rgba(255,215,0,.15)
 
 border:
 
-1px solid rgba(255,255,255,.8);
+
+2px solid rgba(255,215,0,.7);
 
 
 
@@ -222,11 +290,14 @@ border-radius:25px;
 
 box-shadow:
 
-0 0 25px rgba(255,215,0,.5);
+
+0 0 20px rgba(255,215,0,.6),
+
+inset 0 0 20px rgba(255,255,255,.2);
 
 
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 
 
 
@@ -234,6 +305,7 @@ backdrop-filter:blur(10px);
 
 
 
+/* 名前 */
 
 
 .name{
@@ -242,27 +314,27 @@ backdrop-filter:blur(10px);
 text-align:center;
 
 
-font-size:42px;
+font-size:48px;
 
 
 font-weight:bold;
 
 
-
-color:white;
-
+color:#fff;
 
 
 text-shadow:
 
 
-0 0 10px gold,
+0 0 10px white,
 
-0 0 25px white;
+0 0 25px gold,
 
+0 0 50px gold;
 
 
 }
+
 
 
 
@@ -278,31 +350,36 @@ margin-top:15px;
 font-size:18px;
 
 
-color:#fff4c7;
+color:#ffeaa0;
 
 
 }
 
 
 
+/* 見出し */
 
 
 h2{
 
 
-color:#ffe58a;
+color:#ffd700;
+
+
+font-size:23px;
+
+
+text-shadow:
+
+
+0 0 10px gold;
 
 
 margin-bottom:15px;
 
 
-font-size:22px;
-
-
-text-shadow:0 0 10px gold;
-
-
 }
+
 
 
 
@@ -311,6 +388,9 @@ text-shadow:0 0 10px gold;
 
 
 line-height:2;
+
+
+font-size:16px;
 
 
 }
@@ -337,14 +417,19 @@ line-height:2;
 text-align:center;
 
 
-font-size:20px;
+font-size:22px;
 
 
 color:#ffd700;
 
 
-}
+text-shadow:
 
+
+0 0 15px gold;
+
+
+}
 
 
 
@@ -352,14 +437,19 @@ color:#ffd700;
 .stars{
 
 
-font-size:28px;
+font-size:30px;
 
 
 color:#ffd700;
 
 
-}
+text-shadow:
 
+
+0 0 15px gold;
+
+
+}
 
 
 
@@ -370,13 +460,32 @@ color:#ffd700;
 margin-top:15px;
 
 
-line-height:1.8;
+line-height:1.9;
 
 
 }
 
 
 
+
+
+hr{
+
+
+border:
+
+1px solid gold;
+
+
+opacity:.5;
+
+
+}
+
+
+
+
+/* 戻る */
 
 
 .back{
@@ -385,34 +494,35 @@ line-height:1.8;
 display:block;
 
 
-width:230px;
+width:240px;
 
 
-margin:45px auto;
+margin:50px auto;
 
 
-padding:16px;
+padding:18px;
+
 
 
 text-align:center;
 
 
-border-radius:40px;
-
+border-radius:50px;
 
 
 background:
 
+
 linear-gradient(
 90deg,
-gold,
+#ffd700,
 white,
-gold
+#ffd700
 );
 
 
 
-color:#6b4800;
+color:#5a3b00;
 
 
 font-weight:bold;
@@ -421,10 +531,14 @@ font-weight:bold;
 text-decoration:none;
 
 
+
 box-shadow:
 
 
-0 0 30px gold;
+0 0 30px gold,
+
+0 0 60px white;
+
 
 
 }
@@ -433,8 +547,8 @@ box-shadow:
 
 </style>
 
-</head>
 
+</head>
 
 
 <body>
@@ -445,9 +559,10 @@ box-shadow:
 <header>
 
 
+
 <div class="rank">
 
-👑 PREMIUM CAST 👑
+🥂 ROYAL CAST No.3 🥂
 
 </div>
 
@@ -460,9 +575,10 @@ RUKI
 </h1>
 
 
+
 <p>
 
-The Prince of White
+👑 Champagne Prince 👑
 
 </p>
 
@@ -472,12 +588,11 @@ The Prince of White
 
 
 
-
 <img
 
 class="profile-img"
 
-src="RUKI.jpg"
+src="images/boy3.jpg"
 
 alt="瑠姫"
 
@@ -498,13 +613,50 @@ alt="瑠姫"
 
 <p class="catch">
 
-👑 あなたを最高のお姫様にする👑
+
+💎 あなた専属のシャンパン王子 💎
+
 
 </p>
 
 
 </div>
 
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+💰 PROFILE
+
+</h2>
+
+
+<p class="profile">
+
+
+年齢：23歳<br>
+
+身長：180cm<br>
+
+血液型：O型<br>
+
+誕生日：12月25日<br>
+
+趣味：読書・音楽鑑賞<br>
+
+特技：人を幸せにすること
+
+
+</p>
+
+
+</div>
 
 
 
@@ -526,17 +678,17 @@ alt="瑠姫"
 初めまして、瑠姫です。<br><br>
 
 
-せっかく出会えた時間だからこそ、
-日常を忘れられるような
-特別なひとときを届けたいと思っています。<br><br>
+あなたが過ごす時間を、
+特別な思い出に変えることが
+僕の役目です。<br><br>
 
 
-あなたが笑顔で帰れることが、
-僕にとって一番嬉しいことです。<br><br>
+最高の笑顔と、
+最高の時間をプレゼントします。<br><br>
 
 
-今日はあなたを、
-最高のお姫様にします。
+今夜だけは、
+あなたがお姫様です。
 
 
 </p>
@@ -558,7 +710,9 @@ alt="瑠姫"
 </p>
 
 
+
 <br>
+
 
 
 <div class="stars">
@@ -571,21 +725,21 @@ alt="瑠姫"
 <p class="comment">
 
 
-「本当に王子様って存在するんだ…
-と思いました。
-優しさも気遣いも完璧でした。」
+「入った瞬間から別世界でした。
+本当に王子様みたいで、
+夢を見ているような時間でした。」
 
 
 </p>
 
 
-<br>
 
+<br>
 
 <hr>
 
-
 <br>
+
 
 
 <div class="stars">
@@ -598,13 +752,12 @@ alt="瑠姫"
 <p class="comment">
 
 
-「特別扱いされている感じがして、
-夢みたいな時間でした。
-また絶対会いたいです。」
+「気遣いも会話も完璧。
+シャンパンが似合う人って
+こういう人なんだと思いました。」
 
 
 </p>
-
 
 
 </div>
@@ -613,11 +766,14 @@ alt="瑠姫"
 
 
 
-<a href="review-RUKI2.html" class="back">
+<a href="index.html" class="back">
 
-指名する
+
+🥂 CAST LIST 🥂
+
 
 </a>
+
 
 
 
