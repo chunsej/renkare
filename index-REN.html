@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>レンタル彼氏</title>
+
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(80,70,50,0.25),
+        transparent 40%
+    ),
+
+    linear-gradient(
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.96)
+    ),
+
+    url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+
+    color:white;
+
+}
+
+
+
+/* タイトル */
+
+header{
+
+
+    text-align:center;
+
+    padding:50px 20px 30px;
+
+
+}
+
+
+header h1{
+
+
+    font-size:42px;
+
+    letter-spacing:8px;
+
+
+    color:#d4af37;
+
+
+    text-shadow:
+
+
+    0 0 10px rgba(212,175,55,.8),
+
+    0 0 30px rgba(212,175,55,.5);
+
+
+
+}
+
+
+header p{
+
+
+    margin-top:20px;
+
+    font-size:15px;
+
+    color:#ddd;
+
+    line-height:2;
+
+
+}
+
+
+
+/* メンバー一覧 */
+
+.member-list{
+
+
+    width:100%;
+
+    max-width:430px;
+
+
+    margin:0 auto;
+
+
+    padding:20px;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:14px;
+
+
+}
+
+
+
+/* カード */
+
+.member{
+
+
+    position:relative;
+
+
+    border-radius:15px;
+
+
+    overflow:hidden;
+
+
+    background:#111;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+/* クリック演出 */
+
+.member:hover,
+
+
+.member:active{
+
+
+    transform:
+
+    translateY(-8px)
+
+    scale(1.05);
+
+
+
+}
+
+
+
+/* 写真 */
+
+
+.member img{
+
+
+    width:100%;
+
+
+    aspect-ratio:3/4;
+
+
+    object-fit:cover;
+
+
+    display:block;
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.member:hover img{
+
+
+    filter:
+
+    brightness(1.2);
+
+
+
+}
+
+
+
+/* 名前 */
+
+.member-name{
+
+
+    text-align:center;
+
+
+    padding:10px 3px;
+
+
+    font-size:14px;
+
+
+    font-weight:bold;
+
+
+    letter-spacing:1px;
+
+
+    background:
+
+    rgba(0,0,0,.7);
+
+
+}
+
+
+
+/* カラー枠 */
+
+
+.green{
+
+border:2px solid #4caf50;
+
+box-shadow:0 0 12px #4caf50;
+
+}
+
+
+
+.blue{
+
+border:2px solid #2196f3;
+
+box-shadow:0 0 12px #2196f3;
+
+}
+
+
+
+.white{
+
+border:2px solid white;
+
+box-shadow:0 0 12px white;
+
+}
+
+
+
+.lightblue{
+
+border:2px solid #87ceeb;
+
+box-shadow:0 0 12px #87ceeb;
+
+}
+
+
+
+.beige{
+
+border:2px solid #c8a77a;
+
+box-shadow:0 0 12px #c8a77a;
+
+}
+
+
+
+.pink{
+
+border:2px solid #ff69b4;
+
+box-shadow:0 0 12px #ff69b4;
+
+}
+
+
+
+.purple{
+
+border:2px solid #c8a2c8;
+
+box-shadow:0 0 12px #c8a2c8;
+
+}
+
+/* 黒 */
+
+.black{
+
+border:2px solid #333;
+
+box-shadow:0 0 12px #777;
+
+}
+
+
+
+/* 赤 */
+
+.red{
+
+border:2px solid #e60012;
+
+box-shadow:0 0 12px #e60012;
+
+}
+
+
+
+/* リンク */
+
+.member a{
+
+    text-decoration:none;
+
+    color:white;
+
+}
+
+
+
+/* フッター */
+
+footer{
+
+
+    text-align:center;
+
+
+    padding:40px 20px;
+
+
+    color:#888;
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+/* スマホ微調整 */
+
+@media(max-width:360px){
+
+
+    header h1{
+
+        font-size:32px;
+
+    }
+
+
+    .member-list{
+
+        gap:10px;
+
+        padding:15px;
+
+    }
+
+
+    .member-name{
+
+        font-size:12px;
+
+    }
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<h1>
+
+レンタル彼氏
+
+</h1>
+
+
+<p>
+
+あなたの日常に特別な時間を。<br>
+
+個性豊かな9人の彼氏候補をご紹介します。
+
+</p>
+
+
+</header>
+
+
+
+<section class="member-list">
+
+
+
+<!-- SHO -->
+
+<div class="member green">
+
+<img src="SHO.jpg" alt="SHO">
+
+<div class="member-name">
+
+奨
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- REN -->
+
+<div class="member blue">
+
+<a href="REN.html">
+
+<img src="REN2.jpg" alt="REN">
+
+<div class="member-name">
+
+<s>蓮</s>
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- RUKI -->
+
+<div class="member white">
+
+<img src="RUKI.jpg" alt="RUKI">
+
+<div class="member-name">
+
+瑠姫
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- JUNKI -->
+
+<div class="member lightblue">
+
+<img src="JUNKI.jpg" alt="JUNKI">
+
+<div class="member-name">
+
+純喜
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- KEIGO -->
+
+<div class="member beige">
+
+<img src="KEIGO.jpg" alt="KEIGO">
+
+<div class="member-name">
+
+景瑚
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- TAKUMI -->
+
+<div class="member pink">
+
+<img src="TAKUMI.jpg" alt="TAKUMI">
+
+<div class="member-name">
+
+拓実
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- SYOYA -->
+
+<div class="member purple">
+
+<img src="SYOYA.jpg" alt="SYOYA">
+
+<div class="member-name">
+
+翔也
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- SKY -->
+
+<div class="member black">
+
+<img src="SKY.jpg" alt="SKY">
+
+<div class="member-name">
+
+碧海
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<!-- MAME -->
+
+<div class="member red">
+
+<img src="MAME.jpg" alt="MAME">
+
+<div class="member-name">
+
+一成
+
+</div>
+
+</a>
+
+</div>
+
+
+
+</section>
+
+
+
+<footer>
+
+
+© Rental Boyfriend
+
+
+</footer>
+
+
+
+</body>
+
+</html>
