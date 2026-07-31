@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beauty Clinic</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Yu Gothic",sans-serif;
+}
+
+body{
+
+background:#fff5f8;
+
+color:#444;
+
+}
+
+header{
+
+background:linear-gradient(135deg,#ff8db8,#ffd6e5);
+
+padding:35px 20px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+}
+
+header h1{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+header p{
+
+font-size:15px;
+
+opacity:.95;
+
+}
+
+.container{
+
+width:92%;
+
+max-width:500px;
+
+margin:25px auto;
+
+}
+
+.card{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:18px;
+
+box-shadow:0 5px 15px rgba(255,105,180,.12);
+
+}
+
+.card h2{
+
+font-size:20px;
+
+margin-bottom:18px;
+
+color:#ff5f9e;
+
+}
+
+label{
+
+display:block;
+
+font-size:14px;
+
+margin-bottom:8px;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:14px;
+
+border:1px solid #ffd2e3;
+
+border-radius:12px;
+
+font-size:15px;
+
+background:#fffafb;
+
+outline:none;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+border-color:#ff7cad;
+
+}
+
+textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+button{
+
+width:100%;
+
+padding:18px;
+
+margin-top:20px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#ff6ea8,#ff8fc2);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:0 6px 15px rgba(255,105,180,.25);
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+.notice{
+
+margin-top:25px;
+
+padding:18px;
+
+background:#fff3f7;
+
+border:1px solid #ffc6d9;
+
+border-radius:14px;
+
+font-size:13px;
+
+line-height:1.8;
+
+color:#a84d71;
+
+}
+
+.footer{
+
+text-align:center;
+
+font-size:12px;
+
+color:#999;
+
+margin:30px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌸 Beauty Clinic 🌸</h1>
+
+<p>無料カウンセリング予約フォーム</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>ご予約情報</h2>
+
+<label>お名前</label>
+
+<input type="text" placeholder="山田 花子">
+
+<label>ご希望の施術</label>
+
+<select>
+
+<option>二重整形</option>
+<option>医療脱毛</option>
+<option>ボトックス</option>
+<option>ヒアルロン酸</option>
+<option>シミ取りレーザー</option>
+<option>美容点滴</option>
+<option>糸リフト</option>
+<option>その他</option>
+
+</select>
+
+<label>ご相談内容</label>
+
+<textarea placeholder="気になることやご相談内容をご入力ください。"></textarea>
+
+<div class="notice">
+
+⚠️ ご予約前に、施術内容やリスクについて十分にご理解いただき、ご自身の意思でご予約をご検討ください。<br><br>
+
+ご不安な点やご不明な点がある場合は、無理に予約を進めず、カウンセリング時にお気軽にご相談ください。<br><br>
+
+十分にご納得いただいたうえでご予約いただくことが、安心して施術を受けていただくための大切な第一歩です。
+
+</div>
+
+<button onclick="location.href='review-SYOYA2.html'">
+
+施術の予約をする
+
+</button>
+</div>
+
+</div>
+
+<div class="footer">
+
+© Beauty Clinic
+
+</div>
+
+</body>
+
+</html>
